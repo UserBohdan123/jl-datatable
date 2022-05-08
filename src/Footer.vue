@@ -11,14 +11,14 @@
       <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
         <template v-for="(link, index) in links" :key="index">
           <span v-if="!link.url"
+                v-html="link.label"
                 class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">
-            {{ link.label }}
           </span>
           <a v-else
              @click="selectPage(link.url)"
              href="#"
-             :class="'hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium' + (link.active)? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'">
-            {{ link.label }}
+             v-html="link.label"
+             :class="(link.active) ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium'">
           </a>
         </template>
       </nav>
