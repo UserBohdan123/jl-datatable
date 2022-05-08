@@ -1,5 +1,5 @@
 {
-  "name": "jl-datatable",
+  "name": "jl-datatable-mod",
   "description": "A datatable server side mode for vuejs ⚙️",
   "version": "1.1.0",
   "private": false,
@@ -32,16 +32,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jhonijlm/jl-datatable"
+    "url": "git+https://github.com/UserBohdan123/jl-datatable.git"
   },
-  "bugs": {
-    "url": "https://github.com/jhonijlm/jl-datatable/issues"
-  },
-  "homepage": "",
-  "author": "Jhoni Larico <jhoni.jlm97@gmail.com>",
+  "homepage": "https://github.com/UserBohdan123/jl-datatable",
+  "author": "UserBohdan123",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.0.0-alpha1",
     "core-js": "^3.6.5",
     "lodash": "^4.17.21",
     "vue": "^3.0.0"

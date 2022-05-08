@@ -1,5 +1,5 @@
 <template>
-    <thead class="table-light">
+    <thead :class="tHeadClass">
         <tr>
             <template v-for="(column, index) in columns" :key="index" >
                 <th v-if="typeof column === 'object' && (column.isHide == false || column.isHide == undefined)" @click="sort(column, sortable)" :width="column.width"  >
@@ -17,6 +17,12 @@ import imgSortBoth from './assets/images/sort_both.png';
 
 export default {
     props: {
+        tHeadClass: {
+          type: String,
+          default: () => {
+            return "table-light"
+          }
+        },
         columns: {
             required: true,
             type: Array,

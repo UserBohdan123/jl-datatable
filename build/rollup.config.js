@@ -7,8 +7,7 @@ export default {
     input: 'src/index.js',
     external: [
         'lodash/debounce',
-        'vue',
-        'bootstrap/dist/css/bootstrap.min.css'
+        'vue'
     ],
     output: {
         name: 'JlDatatable',

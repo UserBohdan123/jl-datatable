@@ -1,5 +1,4 @@
 import component from './JlDatatable.vue'
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function install(Vue) {
     if (install.installed) return

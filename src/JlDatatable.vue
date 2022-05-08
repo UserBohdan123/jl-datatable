@@ -57,26 +57,8 @@ export default {
   props: {
     url: {
       // required: true,
-      type: String,     
-      validator(value) {
-
-        if(value === undefined){
-          throw Error('The url is required.');  
-        }
-
-        let pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-        '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-        '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-        '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-
-        const isUrl = !!pattern.test(value)
-        if(!isUrl){
-          throw Error('The url is invalid.');  
-        }
-        return true;
-      }
+      type: String,
+      required: true
     },
     requestOptions: {
       type: Object,

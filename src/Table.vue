@@ -1,6 +1,7 @@
 <template>
-    <table class="table table-hover table-responsive align-middle">
-        <TableHeader 
+    <table :class="tableClass">
+        <TableHeader
+            :tHeadClass="tHeadClass"
             :columns="columns"
             :isSort="isSort"
             :sortDt="sortDt"
@@ -20,6 +21,15 @@ import TableHeader from './TableHeader.vue';
 import TableBody from './TableBody.vue';
 export default {
     props: {
+      tableClass: {
+        type: String,
+        default: () => {
+          return "table table-hover table-responsive align-middle"
+        }
+      },
+      tHeadClass: {
+        type: String,
+      },
         columns: Array,
         data: Array,
         isSort: Boolean,
