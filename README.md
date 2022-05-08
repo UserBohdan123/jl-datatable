@@ -1,4 +1,4 @@
 Fork of https://github.com/jhonijlm/jl-datatable
 Changes:
-- removed bootstrap dependency. table classes might be passed using props
+- removed bootstrap. used tailwindcss v2 compatible classes  
 - removed url validation. (was impossible to use of "localhost/.." urls)
