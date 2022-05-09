@@ -239,10 +239,10 @@ export default {
 
           this.$emit('entriesFetched', {request, data});
           this.data = data.data;
-          this.metaData.from = data.from ? data.from : 0;
-          this.metaData.to = data.to ? data.to : 0;
-          this.metaData.total = data.total ? data.total : 0;
-          this.links = data.links;
+          this.metaData.from = data.meta.from ? data.meta.from : 0;
+          this.metaData.to = data.meta.to ? data.meta.to : 0;
+          this.metaData.total = data.meta.total ? data.meta.total : 0;
+          this.links = data.meta.links;
           this.isLoading = false;
         }else{
           this.$emit('error', {
