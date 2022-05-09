@@ -2,7 +2,9 @@
     <thead :class="tHeadClass">
         <tr>
             <template v-for="(column, index) in columns" :key="index" >
-                <th v-if="typeof column === 'object' && (column.isHide == false || column.isHide == undefined)" @click="sort(column, sortable)" :width="column.width"  >
+              <th class="px-6 align-middle py-3 whitespace-nowrap text-left"
+                  v-if="typeof column === 'object' && (column.isHide == false || column.isHide == undefined)"
+                  @click="sort(column, sortable)" :width="column.width">
                     {{ column.title}}
                     <img v-if="isSort &&!column.isAction" :src="sortBy == column.key ? (iconSortPath ? iconSortPath : iconSortBothPath) : iconSortBothPath" >
                 </th>
@@ -20,7 +22,7 @@ export default {
         tHeadClass: {
           type: String,
           default: () => {
-            return "table-light"
+            return "bg-white border-b"
           }
         },
         columns: {

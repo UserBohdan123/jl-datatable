@@ -1,5 +1,5 @@
 <template>
-    <tbody v-if="data.length > 0">
+    <tbody v-if="data.length > 0" class="text-left text-gray-700">
         <!-- <template v-if="isLoading">
             <tr>
                 {{language.loading}}                
@@ -12,14 +12,14 @@
 
         </template> -->
         <template  v-for="(row, index1) in data" :key="index1">
-            <tr>
+            <tr class="bg-white border-b">
             <template v-for="(column, index2) in columns" :key="index2">   
                 <template v-if="Object.keys(row).find(key => key === column.key)">
-                    <td v-if="!column.isAction && (column.isHide == false || column.isHide == undefined)">
+                    <td class="px-6 py-3 p-4" v-if="!column.isAction && (column.isHide == false || column.isHide == undefined)">
                         {{ row[column.key]}}
                     </td> 
                     <template v-else>      
-                        <td v-if="typeof column.component ==='object' && (column.isHide == false || column.isHide == undefined)">
+                        <td  class="px-6 py-3 p-4" v-if="typeof column.component ==='object' && (column.isHide == false || column.isHide == undefined)">
                             <component                                                                    
                                 :is="column.component" 
                                 :row="row"
@@ -32,14 +32,12 @@
             </tr>
         </template>
     </tbody>    
-    <tbody v-else-if="!isLoading">
+    <tbody v-else-if="!isLoading" class="text-left text-gray-700">
         <tr>
             {{language.zeroRecords}}                
         </tr>
-    </tbody>        
-
+    </tbody>
 </template>
-
 <script>
 export default {
     props: {

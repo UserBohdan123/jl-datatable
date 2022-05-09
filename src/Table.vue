@@ -24,7 +24,7 @@ export default {
       tableClass: {
         type: String,
         default: () => {
-          return "table table-hover table-responsive align-middle"
+          return "items-center bg-transparent w-full border-collapse"
         }
       },
       tHeadClass: {

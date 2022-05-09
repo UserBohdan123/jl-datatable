@@ -1,12 +1,9 @@
 <template>
   <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
     <p class="text-sm text-gray-700">
-      <!--          Showing 1-->
-      {{ formatLang.labelInfo1 }} <span class="font-medium">{{ metaData.from }}</span>
-      <!--          to 50-->
-      {{ formatLang.labelInfo2 }} <span class="font-medium">{{ metaData.to }}</span>
-      <!--          of 100 results-->
-      {{ formatLang.labelInfo3 }} <span class="font-medium">{{ metaData.total }}</span> {{ formatLang.labelInfo4 }}</p>
+      {{ formatLang.labelInfo1 }} <span class="font-medium"> {{ metaData.from }} </span>
+      {{ formatLang.labelInfo2 }} <span class="font-medium"> {{ metaData.to }} </span>
+      {{ formatLang.labelInfo3 }} <span class="font-medium"> {{ metaData.total }} </span> {{ formatLang.labelInfo4 }}</p>
     <nav>
       <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
         <template v-for="(link, index) in links" :key="index">
