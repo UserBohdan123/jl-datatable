@@ -1,7 +1,7 @@
 {
   "name": "jl-datatable-mod",
   "description": "A datatable server side mode for vuejs ⚙️. Forked at v1.1.0",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "private": false,
   "main": "dist/jl-datatable.umd.js",
   "module": "dist/jl-datatable.esm.js",

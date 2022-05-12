@@ -125,7 +125,10 @@ export default {
       type: Array,
       default: () =>  [10, 20, 50, 100],
       validator(value){        
-        for(const menu of value){          
+        for(const menu of value){
+          if (menu == 'All'){
+            continue;
+          }
           if(!Number.isInteger(menu)){
             throw Error('The menu is not a whole number.');
           }
@@ -216,7 +219,9 @@ export default {
         const parameters = new Map() ;
         const paramPage = urlSearchParams.get("page");
         parameters.set('page', paramPage ? paramPage : 1);
-        parameters.set('pageLength', this.menu);
+        if (this.menu !== 'All'){
+          parameters.set('pageLength', this.menu);
+        }
         parameters.set('sortBy', this.sortBy);
         parameters.set('sortColumns', this.columns.map(column => ((column.isAction === false || column.isAction === undefined) && (column.isSort === true || column.isSort === undefined)) ? column.key : "").filter(txt => txt != "").join(','));
         parameters.set('sort', this.sort);
