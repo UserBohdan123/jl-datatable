@@ -3,9 +3,14 @@
     <p class="text-sm text-gray-700">
       {{ formatLang.labelInfo1 }} <span class="font-medium"> {{ metaData.from }} </span>
       {{ formatLang.labelInfo2 }} <span class="font-medium"> {{ metaData.to }} </span>
-      {{ formatLang.labelInfo3 }} <span class="font-medium"> {{ metaData.total }} </span> {{ formatLang.labelInfo4 }}</p>
+      <span v-show="menu !== 'All'">
+        {{ formatLang.labelInfo3 }} <span class="font-medium"> {{ metaData.total }} </span> {{ formatLang.labelInfo4 }}
+      </span>
+      </p>
     <nav>
-      <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
+      <nav
+          v-show="menu !== 'All'"
+          class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
         <template v-for="(link, index) in links" :key="index">
           <span v-if="!link.url"
                 v-html="link.label"
@@ -26,6 +31,7 @@
 <script>
 export default {
   props: {
+    menu: {type: String, Number},
     metaData: Object,
     links: Array,
     language: Object
