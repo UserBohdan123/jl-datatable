@@ -24,6 +24,7 @@
       /> 
       <Footer
         :metaData="metaData"
+        :menu="menu"
         :links="links"
         :language="lang"
         @onChangePage="setPage"
