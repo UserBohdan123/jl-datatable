@@ -245,6 +245,17 @@ export default {
 
           this.$emit('entriesFetched', {request, data});
           this.data = data.data;
+          if (this.menu == 'All'){
+            this.metaData.from = this.data.length ? 1 : 0;
+            this.metaData.to = this.data.length ? this.data.length : 0;
+            this.metaData.total = this.data.length ? this.data.length : 0;
+            this.links = [];
+          }else{
+            this.metaData.from = data.meta.from ? data.meta.from : 0;
+            this.metaData.to = data.meta.to ? data.meta.to : 0;
+            this.metaData.total = data.meta.total ? data.meta.total : 0;
+            this.links = data.meta.links;
+          }
           this.metaData.from = data.meta.from ? data.meta.from : 0;
           this.metaData.to = data.meta.to ? data.meta.to : 0;
           this.metaData.total = data.meta.total ? data.meta.total : 0;
