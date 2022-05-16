@@ -1,10 +1,10 @@
 <template>
   <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
     <p class="text-sm text-gray-700">
-      {{ formatLang.labelInfo1 }} <span class="font-medium"> {{ metaData.from }} </span>
-      {{ formatLang.labelInfo2 }} <span class="font-medium"> {{ metaData.to }} </span>
+      {{ formatLang.labelInfo1 }}&nbsp;<span class="font-medium"> {{ metaData.from }} </span>&nbsp;
+      {{ formatLang.labelInfo2 }}&nbsp;<span class="font-medium"> {{ metaData.to }} </span>&nbsp;
       <span v-show="menu !== 'All'">
-        {{ formatLang.labelInfo3 }} <span class="font-medium"> {{ metaData.total }} </span> {{ formatLang.labelInfo4 }}
+        {{ formatLang.labelInfo3 }}&nbsp; <span class="font-medium"> {{ metaData.total }} </span>&nbsp; {{ formatLang.labelInfo4 }}
       </span>
       </p>
     <nav>
