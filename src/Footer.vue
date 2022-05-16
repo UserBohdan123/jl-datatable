@@ -1,12 +1,16 @@
 <template>
   <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-    <p class="text-sm text-gray-700">
-      {{ formatLang.labelInfo1 }}&nbsp;<span class="font-medium"> {{ metaData.from }} </span>&nbsp;
-      {{ formatLang.labelInfo2 }}&nbsp;<span class="font-medium"> {{ metaData.to }} </span>&nbsp;
-      <span v-show="menu !== 'All'">
-        {{ formatLang.labelInfo3 }}&nbsp; <span class="font-medium"> {{ metaData.total }} </span>&nbsp; {{ formatLang.labelInfo4 }}
-      </span>
-      </p>
+    <p class="p-1 text-sm text-gray-700 font-medium">
+      <span>{{ formatLang.labelInfo1 }}&nbsp;</span>
+      <span>{{ metaData.from }}&nbsp;</span>
+
+      <span>{{ formatLang.labelInfo2 }}&nbsp;</span>
+      <span>{{ metaData.to }}&nbsp;</span>
+
+      <span v-show="menu !== 'All'">{{ formatLang.labelInfo3 }}&nbsp;</span>
+      <span v-show="menu !== 'All'">{{ metaData.total }}&nbsp;</span>
+      <span v-show="menu !== 'All'">{{ formatLang.labelInfo4 }}&nbsp;</span>
+    </p>
     <nav>
       <nav
           v-show="menu !== 'All'"
