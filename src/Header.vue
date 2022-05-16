@@ -11,7 +11,7 @@
             <label for="inputSearch" class="col-form-label">&nbsp;{{ formatLang.labelMenu2}}&nbsp;</label>
           </div>
         </div>
-        <div v-if="isSearch" class="p-1 inline-block float-right">
+        <div v-if="isSearch" class="p-5 inline-block float-right">
             <div class="inline-block float-right">
                 <label class="col-form-label">&nbsp;{{formatLang.labelSearch}}&nbsp;</label>
                 <input v-model.trim="search" type="search"
