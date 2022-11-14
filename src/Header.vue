@@ -4,7 +4,7 @@
           <div class="inline-block float-left">
             <label for="inputSearch" class="col-form-label">&nbsp;{{formatLang.labelMenu1}}&nbsp;</label>
             <select v-model="menuSelect"
-                    class="inline-block border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-20 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                    class="inline-block border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-20 p-2.5 border-gray-600 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
                     @change="selectMenu">
               <option v-for="(menu, index) in lengthMenu" :key="index" :value="menu"> {{menu}}</option>
             </select>
@@ -15,7 +15,7 @@
             <div class="inline-block float-right">
                 <label class="col-form-label">&nbsp;{{formatLang.labelSearch}}&nbsp;</label>
                 <input v-model.trim="search" type="search"
-                       class="inline-block border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-500 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                       class="inline-block border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-500 p-2.5 border-gray-600 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
                        @input="inputSearch" />
             </div>
         </div>
